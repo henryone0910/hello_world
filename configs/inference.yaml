@@ -1,0 +1,12 @@
+work_dir: ${hydra:runtime.cwd}
+
+name: baseline-swin_large_patch4_window12_384
+checkpoint_s: ./weights/s/ckpts/last.ckpt
+checkpoint_h: ./weights/h/ckpts/checkpoint-epoch27-step8764-val_acc0.988-val_loss0.062.ckpt
+crop_size: 384
+
+videos_dir: /data/*
+
+hydra:
+  run:
+    dir: /result/
